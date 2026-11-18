@@ -38,20 +38,36 @@ void count_spaces() {
     (void)spaces;
 }
 
+void count_zeros() {
+    int n = 102030;
+    int zeros = 0;
+    while (n > 0) { if (n % 10 == 0) zeros += 1; n /= 10; }
+    (void)zeros;
+}
+
+void divisor_count() {
+    int n = 36;
+    int count = 0;
+    for (int d = 1; d <= n; ++d) {
+        if (n % d == 0) count += 1;
+    }
+    (void)count;
+}
+
 extern "C" int subtle_marble();
-extern void golden_willow();
-extern void placid_lantern();
-extern void serene_kite();
-extern void still_thicket();
+extern void subtle_signal();
+extern void sable_crescent();
+extern void amber_prism();
 
 int main() {
     half_value();
     vector_reverse();
     vector_max();
     count_spaces();
-    golden_willow();
-    placid_lantern();
-    serene_kite();
-    still_thicket();
+    count_zeros();
+    divisor_count();
+    subtle_signal();
+    sable_crescent();
+    amber_prism();
     return subtle_marble();
 }
